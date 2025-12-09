@@ -9,15 +9,28 @@ readme = "README.md"
 authors = [
     { name = "Gregory H. Halverson", email = "gregory.h.halverson@jpl.nasa.gov" },
 ]
+license = { text = "Apache-2.0" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
     "termcolor"
 ]
-
 requires-python = ">=3.10"
 
-[tool.setuptools.package-data]
-colored_logging = ["*.txt"]
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest>=6.0",
+    "pytest-cov",
+    "jupyter",
+    "pytest",
+    "twine"
+]
+
+[project.urls]
+Homepage = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging"
+Repository = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging"
+Issues = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging/issues"
